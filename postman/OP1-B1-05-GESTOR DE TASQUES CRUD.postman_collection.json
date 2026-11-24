@@ -1,0 +1,626 @@
+{
+  "info": {
+    "_postman_id": "acf5729f-859a-4dff-a17d-0401226efe3d",
+    "name": "OP1-B1-05-GESTOR DE TASQUES CRUD",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "58523219",
+    "_collection_link": "https://go.postman.co/collection/58523219-acf5729f-859a-4dff-a17d-0401226efe3d?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "1",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Dissenyar una pàgina web\",\r\n  \"description\": \"Crear una pàgina web responsiva amb HTML, CSS i JavaScript\",\r\n  \"cost\": 500,\r\n  \"hours_estimated\": 20,\r\n  \"image\": \"https://example.com/images/task1.jpg\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/tasks",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "tasks"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "1",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"Dissenyar una pàgina web\",\r\n  \"description\": \"Crear una pàgina web responsiva amb HTML, CSS i JavaScript\",\r\n  \"cost\": 500,\r\n  \"hours_estimated\": 20,\r\n  \"image\": \"https://example.com/images/task1.jpg\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/tasks",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "tasks"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "309"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"135-WgfiOzAagO0c0eQBQdqD3i+n9m0\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 24 Nov 2026 15:18:49 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"title\": \"Dissenyar una pàgina web\",\n  \"description\": \"Crear una pàgina web responsiva amb HTML, CSS i JavaScript\",\n  \"cost\": 500,\n  \"hours_estimated\": 20,\n  \"image\": \"https://example.com/images/task1.jpg\",\n  \"completed\": false,\n  \"finished_at\": null,\n  \"_id\": \"6b05aad97559096b6b3b1a69\",\n  \"createdAt\": \"2026-11-24T15:18:49.286Z\",\n  \"__v\": 0\n}"
+        }
+      ]
+    },
+    {
+      "name": "2",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"description\": \"Tasca sense títol ni cost\",\r\n  \"hours_estimated\": 10\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/tasks",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "tasks"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "2",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"description\": \"Tasca sense títol ni cost\",\r\n  \"hours_estimated\": 10\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/tasks",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "tasks"
+              ]
+            }
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "150"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"96-t83ABVucbQ8Xt/V2+gbfotacKUQ\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 24 Nov 2026 15:19:38 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"error\": \"No s'ha pogut crear la tasca\",\n  \"details\": \"Task validation failed: title: El títol de la tasca és obligatori, cost: El cost és obligatori\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "3",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/tasks",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "tasks"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "3",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/tasks",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "tasks"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "931"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"3a3-PZE7cI4eIWTKZVBu++lJkk8pwqc\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 24 Nov 2026 15:19:48 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n  {\n    \"_id\": \"6af72ec2674565aa87be40c8\",\n    \"title\": \"Dissenyar una pàgina web\",\n    \"description\": \"Crear una pàgina web responsiva amb HTML, CSS i JavaScript\",\n    \"cost\": 500,\n    \"hours_estimated\": 20,\n    \"image\": \"https://example.com/images/task1.jpg\",\n    \"completed\": false,\n    \"finished_at\": null,\n    \"createdAt\": \"2026-11-13T15:37:38.354Z\",\n    \"__v\": 0\n  },\n  {\n    \"_id\": \"6af72f9a674565aa87be40cd\",\n    \"title\": \"Dissenyar una pàgina web\",\n    \"description\": \"Crear una pàgina web responsiva amb HTML, CSS i JavaScript\",\n    \"cost\": 500,\n    \"hours_estimated\": 20,\n    \"image\": \"https://example.com/images/task1.jpg\",\n    \"completed\": false,\n    \"finished_at\": null,\n    \"createdAt\": \"2026-11-13T15:41:14.421Z\",\n    \"__v\": 0\n  },\n  {\n    \"_id\": \"6b05aad97559096b6b3b1a69\",\n    \"title\": \"Dissenyar una pàgina web\",\n    \"description\": \"Crear una pàgina web responsiva amb HTML, CSS i JavaScript\",\n    \"cost\": 500,\n    \"hours_estimated\": 20,\n    \"image\": \"https://example.com/images/task1.jpg\",\n    \"completed\": false,\n    \"finished_at\": null,\n    \"createdAt\": \"2026-11-24T15:18:49.286Z\",\n    \"__v\": 0\n  }\n]"
+        }
+      ]
+    },
+    {
+      "name": "4",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/tasks/6af72f9b674565aa87be40cf",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "tasks",
+            "6af72f9b674565aa87be40cf"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "4",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/tasks/6af72f9b674565aa87be40cf",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "tasks",
+                "6af72f9b674565aa87be40cf"
+              ]
+            }
+          },
+          "status": "Not Found",
+          "code": 404,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "30"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"1e-BTmfC5TBEcjOK5oUmZvhmcNfjag\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 24 Nov 2026 15:19:53 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"message\": \"Tasca no trobada\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "5",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/tasks/000000000000000000000000",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "tasks",
+            "000000000000000000000000"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "5",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/tasks/000000000000000000000000",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "tasks",
+                "000000000000000000000000"
+              ]
+            }
+          },
+          "status": "Not Found",
+          "code": 404,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "30"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"1e-BTmfC5TBEcjOK5oUmZvhmcNfjag\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 24 Nov 2026 15:19:58 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"message\": \"Tasca no trobada\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "6",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"completed\": true,\r\n  \"hours_real\": 15,\r\n  \"image\": \"https://example.com/images/updated_task.jpg\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/tasks/6af72f9b674565aa87be40cf",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "tasks",
+            "6af72f9b674565aa87be40cf"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "6",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"completed\": true,\r\n  \"hours_real\": 15,\r\n  \"image\": \"https://example.com/images/updated_task.jpg\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/tasks/6af72f9b674565aa87be40cf",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "tasks",
+                "6af72f9b674565aa87be40cf"
+              ]
+            }
+          },
+          "status": "Not Found",
+          "code": 404,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "30"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"1e-BTmfC5TBEcjOK5oUmZvhmcNfjag\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 24 Nov 2026 15:20:03 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"message\": \"Tasca no trobada\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "7",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/tasks/6af72f9b674565aa87be40cf",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "tasks",
+            "6af72f9b674565aa87be40cf"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "7",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/tasks/6af72f9b674565aa87be40cf",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "tasks",
+                "6af72f9b674565aa87be40cf"
+              ]
+            }
+          },
+          "status": "Not Found",
+          "code": 404,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "30"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"1e-BTmfC5TBEcjOK5oUmZvhmcNfjag\""
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 24 Nov 2026 15:20:09 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"message\": \"Tasca no trobada\"\n}"
+        }
+      ]
+    }
+  ]
+}
